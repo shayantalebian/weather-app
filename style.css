@@ -25,4 +25,86 @@ body {
 
 header {
   font-size: 2.2rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-image: linear-gradient(to bottom right, #748ffc, #4dabf7);
+  font-weight: 500;
+  padding: 1.6rem 1.5rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+i {
+  cursor: pointer;
+  font-size: 3rem;
+  margin-right: 0.8rem;
+}
+
+.input-part {
+  margin: 2rem 2.5rem 3rem;
+}
+
+.input-part :where(input, button) {
+  display: none;
+  width: 100%;
+  height: 5.5rem;
+  border: none;
+  outline: none;
+  border-radius: 11px;
+}
+
+.info-text {
+  font-size: 1.7rem;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  border-radius: 11px;
+  margin-bottom: 1.5rem;
+  display: none;
+}
+
+.info-text-error {
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.info-text-pending {
+  display: block;
+  color: #0c5460;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+input {
+  text-align: center;
+  border: 1px solid #bfbfbf !important;
+}
+
+.separator {
+  width: 100%;
+  height: 1px;
+  margin: 2.5rem 0;
+  display: flex;
+  justify-content: center;
+  color: #ccc;
+  background: #ccc;
+  align-items: center;
+}
+
+.separator::before {
+  content: "or";
+  font-size: 1.9rem;
+  background: #fff;
+  padding: 0 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}
+
+.input-part input:is(:focus, :valid) {
+  border: 2px solid #43affc !important;
 }
