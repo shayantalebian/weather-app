@@ -36,18 +36,27 @@ header {
   border-bottom: 1px solid #bfbfbf;
 }
 
-i {
+header i {
   cursor: pointer;
-  font-size: 3rem;
+  font-size: 0rem;
   margin-right: 0.8rem;
+}
+
+.wrapper.active header i {
+  font-size: 3rem;
+  margin-left: 0.5rem;
 }
 
 .input-part {
   margin: 2rem 2.5rem 3rem;
+  /* display: none; */
+}
+
+.wrapper.active .input-part {
+  display: none;
 }
 
 .input-part :where(input, button) {
-  display: none;
   width: 100%;
   height: 5.5rem;
   border: none;
@@ -56,6 +65,7 @@ i {
 }
 
 .info-text {
+  display: none;
   font-size: 1.7rem;
   text-align: center;
   padding: 1.2rem 1rem;
@@ -103,8 +113,106 @@ input {
 
 button {
   cursor: pointer;
+  background-image: linear-gradient(to bottom right, #748ffc, #4dabf7);
+  color: #fff;
 }
 
 .input-part input:is(:focus, :valid) {
   border: 2px solid #43affc !important;
+}
+
+.weather-part {
+  margin: 3rem 0 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.wrapper.active .weather-part {
+  display: flex;
+}
+
+img {
+  max-width: 12.5rem;
+}
+
+.temp {
+  display: flex;
+  font-weight: 500;
+  font-size: 7.2rem;
+}
+
+.numb {
+  font-weight: 600;
+}
+
+.deg {
+  font-size: 4rem;
+  margin: 1rem 0.5rem 0 0;
+  display: block;
+}
+
+.weather {
+  font-size: 2.1rem;
+  text-align: center;
+  margin: -0.5rem 2rem 1.5rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  font-size: 2.1rem;
+  margin-bottom: 3rem;
+}
+
+.location i {
+  font-size: 2.2rem;
+  margin-right: 0.5rem;
+}
+
+.bottom-details {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #b6b6b6;
+}
+
+.column {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+.column i {
+  background-image: linear-gradient(to bottom right, #748ffc, #4dabf7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 4rem;
+}
+
+.column.humidity {
+  border-left: 1px solid #bfbfbf;
+}
+
+.details .temp,
+.humidity span {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.details .temp .deg {
+  margin: 0;
+  font-size: 1.7rem;
+  pad: 0 2px 0 1px;
+}
+
+.details p {
+  font-size: 1.4rem;
+  margin-top: -0.6rem;
 }
