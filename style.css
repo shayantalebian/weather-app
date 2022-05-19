@@ -71,7 +71,6 @@ header i {
   padding: 1.2rem 1rem;
   border-radius: 11px;
   margin-bottom: 1.5rem;
-  display: none;
 }
 
 .info-text-error {
@@ -82,7 +81,7 @@ header i {
 }
 
 .info-text-pending {
-  display: block;
+  display: block !important;
   color: #0c5460;
   background: #d1ecf1;
   border: 1px solid #bee5eb;
