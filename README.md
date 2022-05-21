@@ -1,4 +1,4 @@
-# (weather-app)[https://shayan-weather-app.netlify.app/]
+#[weather-app](https://shayan-weather-app.netlify.app/)
 
 Write the city you want to know the weather and boom!
 
