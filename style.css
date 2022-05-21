@@ -113,6 +113,7 @@ input {
 button {
   cursor: pointer;
   background-image: linear-gradient(to bottom right, #748ffc, #4dabf7);
+  transition: all 300ms;
   color: #fff;
 }
 
@@ -214,4 +215,7 @@ img {
 .details p {
   font-size: 1.4rem;
   margin-top: -0.6rem;
+}
+button:hover {
+  background-image: linear-gradient(to bottom right, #3960fd, #1e96f8);
 }
